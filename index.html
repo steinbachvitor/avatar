@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Avatar</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<header class="cabecalho">
+		<div class="container">
+			<input type="checkbox" id="menu" class="container__botao">
+			<label for="menu">
+				<span class="cabecalho__menu-hamburguer container__imagem"></span>
+			</label>
+			<ul class="menu__lista">
+				<li class="menu__titulo">Categorias:</li>
+				<li class="menu__item"><a href="#" class="menu__link">Séries</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Filme</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Jogos</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Livros</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">HQ</a></li>
+			</ul>
+			<!-- <img src="LOGO" alt="menu hamburguer" class="container__imagem"> -->
+		</div>
+
+		<div class="container">
+			<img src="img/Favoritos.svg" alt="icone de favoritos" class="container__imagem">
+			<img src="img/Compras.svg" alt="icone de compras" class="container__imagem">
+			<img src="img/Usuario.svg" alt="icone de login" class="container__imagem">
+		</div>
+	</header>
+	<main>
+		
+		<section class="banner">
+			<h2 class="banner__titulo">Já sabe por onde começar?</h2>
+			<p class="banner__texto">Encontre em nossa biblioteca  tudo sobre o universo de Avatar!</p>
+			<input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+		</section>
+
+		<section class="carrossel">
+			<h2 class="carrossel__titulo">Mais Acessados</h2>
+
+			<!-- Slider main container -->
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img class="swiper__imgaem" src="img/ascensao-kyoshi.jpg" alt="livro ascensão de kyoshi"></div>
+					<div class="swiper-slide"><img class="swiper__imgaem" src="img/korra-livro.jpg" alt="Livro da korra"></div>
+					<div class="swiper-slide"><img class="swiper__imgaem" src="img/yangchen.jpg" alt="Livro yangchen"></div>
+					<div class="swiper-slide"><img class="swiper__imgaem" src="img/avatar.png" alt="Livro avatar"></div>
+					<div class="swiper-slide"><img class="swiper__imgaem" src="img/escuridao-kyoshi.jpg" alt="Livro escuridão de kyoshi"></div>
+					<div class="swiper-slide"><img class="swiper__imgaem" src="img/avatar-smoke.png" alt="Livro avatar avatar smoke"></div>
+					...
+				</div>
+		
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<!-- hold this slide for 2 seconds -->
+				<div class="swiper-slide" data-swiper-autoplay="2000">
+			
+			</div>
+
+			<div class="card__border">
+				<div class="card">
+					<div class="card__descricao">
+						<div class="descricao">
+							<h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+							<h2 class="descricao__titulo-item">Korra</h2>
+							<p class="descricao__texto">Korra é a atual encarnação do Avatar e imediata sucessora do Avatar Aang.</p>
+						</div>
+						<img src="img/korra.jpg" alt="korra" class="descricao__imagem">
+					</div>
+					<div class="card__botoes">
+						<ul class="botoes">
+							<li class="botoes__item"><img src="img/Favoritos.svg" alt="imagem" class="botoes__imagem"></li>
+							<li class="botoes__item"><img src="img/Compras.svg" alt="imagem" class="botoes__imagem"></li>
+						</ul>
+						<a href="#" class="botoes__ancora">Saiba mais</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="topicos">
+			<h2 class="topicos__titulo">Tópicos visitados recentemente</h2>
+			<ul class="topicos__lista">
+				<li class="topicos__item"><a href="#" class="topicos__link">korra</a></li>
+				<li class="topicos__item"><a href="#" class="topicos__link">Nação do fogo</a></li>
+				<li class="topicos__item"><a href="#" class="topicos__link">Katara</a></li>
+				<li class="topicos__item"><a href="#" class="topicos__link">Aang</a></li>
+			</ul>
+		</section>
+
+		<section class="novidades">
+			<h2 class="novidades__titulo">Fique por dentro das novidades!</h2>
+			<p class="novidades__texto">Atualizações de novos livros, séries e muito mais.</p>
+			<input type="email" placeholder="Cadastre seu e-mail" class="novidades__email">
+		</section>
+		<hr/>
+	</main>
+	<footer class="rodape">
+		<h3 class="rodape__titulo">Grupo Panda</h3>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script>
+		const swiper = new Swiper('.swiper', {
+			spaceBetween: 10,
+			slidesPerView: 3,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+		});
+	</script>
+</body>
+</html>
